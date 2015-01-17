@@ -7,8 +7,21 @@
  */
 'use strict';
 
-var app = function (req, res) {
-    res.end('It works!');
-};
+/*
+    Library imports.
+ */
+var express = require('express');
+
+/*
+    Application setup.
+ */
+var app = express();
+
+/*
+    Routing.
+ */
+app.all('*', function (req, res) {
+    res.send('it works!');
+});
 
 exports.app = app;
