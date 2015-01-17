@@ -3,8 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>Rescatan.do &ndash; Mapa</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <!-- Import WebComponents.js -->
+        <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        <!-- Import Polymer -->
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <!-- Import core components -->
+        <!-- Import Google Maps component -->
+        <link rel="import" href="bower_components/google-map/google-map.html">
+
+        <style>
+        google-map {
+            height: 100%;
+        }
+        </style>
     </head>
+    <body fullbleed vertical layout>
+        <google-map latitude="18.4836253" longitude="-69.9229332" zoom="14" disableDefaultUI="true"></google-map>
     <body>
-    It works!
-    </body>
 </html>
