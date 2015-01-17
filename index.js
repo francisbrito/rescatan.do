@@ -10,7 +10,8 @@
 /*
     Library imports.
  */
-var express = require('express');
+var express = require('express'),
+    maps = require('./lib/rescue-maps');
 
 /*
     Application setup.
@@ -20,8 +21,6 @@ var app = express();
 /*
     Routing.
  */
-app.all('*', function (req, res) {
-    res.send('it works!');
-});
+app.use('/', maps.app);
 
 exports.app = app;
