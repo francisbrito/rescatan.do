@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~0.5.2",
-    "google-map": "GoogleWebComponents/google-map#~0.4.0"
+    "google-map": "GoogleWebComponents/google-map#~0.4.0",
+    "core-ajax": "Polymer/core-ajax#~0.5.2"
   }
 }

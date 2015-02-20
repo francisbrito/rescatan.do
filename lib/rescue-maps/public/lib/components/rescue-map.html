@@ -1,0 +1,36 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/google-map/google-map.html">
+<link rel="import" href="/lib/components/rescue-requests-service.html">
+
+<polymer-element name="rescue-map">
+    <template>
+        <style>
+        :host,
+        google-map {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        </style>
+
+        <rescue-requests-service id="service" requests="{{requests}}"></rescue-requests-service>
+
+        <google-map id="gmap" latitude="18.4836253" longitude="-69.9229332" zoom="12" disableDefaultUI>
+            <template repeat="{{request in requests}}">
+                <google-map-marker latitude="{{request.latitude}}" longitude="{{request.longitude}}">
+                    Lorem ipsum.
+                </google-map-marker>
+            </template>
+        </google-map>
+    </template>
+    <script>
+    'use strict';
+
+    Polymer('rescue-map', {
+        requests: [],
+        requestsChanged: function () {
+            console.log('requests changed.');
+        }
+    });
+    </script>
+</polymer-element>
